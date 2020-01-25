@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import axiosWithAuth from"../auth/axiosWithAuth";
+import AddColor from "./AddColor";
 
 
 const initialColor = {
@@ -67,6 +68,8 @@ const ColorList = ({ colors, updateColors }) => {
           </li>
         ))}
       </ul>
+      <AddColor />
+      
       {editing && (
         <form onSubmit={saveEdit}>
           <legend>edit color</legend>
@@ -98,7 +101,7 @@ const ColorList = ({ colors, updateColors }) => {
         </form>
       )}
       <div className="spacer" />
-      {/* stretch - build another form here to add a color */}
+      
     </div>
   );
 };
